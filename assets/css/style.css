@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Kalnia Glaze", serif;
+}
+.row{
+    display: table;
+    clear: both;
+    width: 100%;
+}
+
+[class^="col-"]{
+    padding: 0 15px;
+    float: left;
+}
+
+.col-3{
+    width: calc((100%*3)/12);
+}
+
+.col-9{
+    width: calc((100%*9)/12);
+}
+
+a:link,a:visited{
+    text-decoration: none;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.header{
+    background-color: #000000;
+    color:#ffffff;
+}
+
+.heading-pri{
+    font-size: 36px;
+    padding: 25px;
+}
+
+.logo{
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.navbar ul{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar ul li{
+    display: inline-block;
+}
+
+.navbar ul li a:link,
+.navbar ul li a:visited{
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: inline-block;
+    height: 54px;
+    line-height: 34px;
+    transition: all .4s ease-in-out;
+    position: relative;
+}
+
+
+/* **************************underline with orange bottom side******* */
+/* .navbar ul li a:hover,
+.navbar ul li a:focus,
+.navbar ul li a:active,
+.navbar ul li a.active{
+    background-color: orange;
+    color: #ffffff;
+} */
+/* **************************underline with orange bottom side******* */
+
+/* **************************underline with orange bottom side with animation******* */
+.navbar ul li a::before{
+    content: '';
+    width: 0;
+    height: 4px;
+    display: inline-block;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all .4s linear;
+}
+
+.navbar ul li a:hover::before,
+.navbar ul li a:active::before,
+.navbar ul li a:focus::before,
+.navbar li a.active a::before{
+    width: 100%;   
+}
+/* **************************underline with orange bottom side with animation******* */
